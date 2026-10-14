@@ -37,16 +37,16 @@ image:
   caption: 'Presentation freedom with Markdown'
   focal_point: Right
 
-links:
-  - icon: brands/github
-    name: Star on GitHub
-    url: https://github.com/HugoBlox/kit
-  - icon: brands/youtube
-    name: Video Tutorial
-    url: https://www.youtube.com/
-  - icon: book-open
-    name: Documentation
-    url: https://docs.hugoblox.com/guides/slides/
+# links:
+#  - icon: brands/github
+#    name: Star on GitHub
+#    url: https://github.com/HugoBlox/kit
+#  - icon: brands/youtube
+#    name: Video Tutorial
+#    url: https://www.youtube.com/
+#  - icon: book-open
+#    name: Documentation
+#    url: https://docs.hugoblox.com/guides/slides/
 
 # Link to your Markdown slides
 slides: "example"
