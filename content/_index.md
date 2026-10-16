@@ -1,152 +1,185 @@
 ---
 title: Our STEM Research Lab
 date: 2026-10-15
-type: landing
-summary: "Welcome to our STEM research group website. Discover our team, equipment, projects, publications, news, and contact information."
-
 design:
-  spacing: "6rem"
-
+  spacing: 6rem
+summary: "Welcome to our STEM research group website. Discover our team, equipment, projects, publications, news, and contact information."
+type: landing
 sections:
-  - block: hero
-    id: intro
+  - id: intro
+    block: hero
+    design:
+      image:
+        size: cover
+        filename: hero-lab.jpg
+        parallax: true
+        position: center
+      background:
+        gradient:
+          end: transparent
+          size: "80% 80%"
+          type: radial
+          shape: ellipse
+          start: primary-500
+          position: center
+      text_color_light: true
     content:
-      title: "Welcome to the **Future** of **STEM Research**"
-      eyebrow: STEM Research Group
       text: We are a multidisciplinary research group focused on pioneering solutions in science and technology.
+      title: "Welcome to the [Future] of [STEM Research]"
+      eyebrow: STEM Research Group
       primary_action:
-        text: Meet the Team
         url: "#team"
         icon: hero/users
+        text: Meet the Team
+        style: gradient
       secondary_action:
-        text: Latest Projects
         url: "#projects"
-        icon: hero/bolt
-    design:
-      css_class: relative overflow-hidden
-      spacing:
-        padding: ["4rem", "0", "4rem", "0"]
-      background:
-        text_color_light: true
-        image:
-          filename: hero-lab.jpg
-          size: cover
-          position: center
-          parallax: true
-        gradient:
-          start: primary-500
-          end: transparent
-          type: radial
-
-  - block: features
-    id: team
-    content:
-      title: Our Dedicated Team
-      text: Meet the talented scientists and staff who drive our lab forward.
-      items:
-        - name: Dr. Alice Smith
-          description: "**Principal Investigator** — Expert in molecular biology and bioinformatics."
-          icon: hero/academic-cap
-        - name: Dr. Bob Johnson
-          description: "**Postdoctoral Researcher** — Specializes in nanomaterials and device physics."
-          icon: hero/beaker
-        - name: Carla Martinez
-          description: "**PhD Candidate** — Working on computational modeling of complex systems."
-          icon: hero/cpu-chip
+        icon: hero/lightning-bolt
+        text: Latest Projects
+        style: ghost
+    spacing:
+      padding:
+        - 4rem
+        - 0
+        - 4rem
+        - 0
+    css_class: relative overflow-hidden
+  - id: team
+    block: team-showcase
     design:
       spacing:
-        padding: ["4rem", "0", "4rem", "0"]
+        padding:
+          - 4rem
+          - 0
+          - 4rem
+          - 0
       background:
         color: primary-50
-
-  - block: features
-    id: equipment
     content:
-      title: State-of-the-Art Equipment
-      text: A closer look at the cutting-edge tools powering our discoveries.
-      items:
-        - name: High-Resolution Microscope
-          description: Enables atomic-level imaging with ultra-precision.
-          icon: hero/magnifying-glass-plus
-        - name: Supercomputer Cluster
-          description: Handles large-scale simulations and data processing.
-          icon: hero/server
-        - name: 3D Bioprinter
-          description: Fabricates complex biological structures with high accuracy.
-          icon: hero/printer
+      text: Meet the talented scientists and staff who drive our lab forward.
+      title: Our Dedicated Team
+      members:
+        - bio: Expert in molecular biology and bioinformatics.
+          name: Dr. Alice Smith
+          role: Principal Investigator
+          image: team-alice.jpg
+          social:
+            - url: "https://orcid.org/0000-0001-2345-6789"
+              network: orcid
+        - bio: Specializes in nanomaterials and device physics.
+          name: Dr. Bob Johnson
+          role: Postdoctoral Researcher
+          image: team-bob.jpg
+          social:
+            - url: "https://linkedin.com/in/bobjohnson"
+              network: linkedin
+        - bio: Working on computational modeling of complex systems.
+          name: Carla Martinez
+          role: PhD Candidate
+          image: team-carla.jpg
+          social: []
+  - id: equipment
+    block: features
     design:
+      layout: grid
       spacing:
-        padding: ["4rem", "0", "4rem", "0"]
+        padding:
+          - 4rem
+          - 0
+          - 4rem
+          - 0
       background:
         color: primary-100
-
-  - block: collection
-    id: projects
     content:
-      title: Our Research Projects
-      text: Explore the diverse research projects underway in our lab.
-      count: 4
-      sort_by: date
-      sort_ascending: false
-      filters:
-        folders:
-          - project
+      text: A closer look at the cutting-edge tools powering our discoveries.
+      items:
+        - icon: hero/microscope
+          name: High-Resolution Microscope
+          description: Enables atomic-level imaging with ultra-precision.
+        - icon: hero/server
+          name: Supercomputer Cluster
+          description: Handles large-scale simulations and data processing.
+        - icon: hero/printer
+          name: 3D Bioprinter
+          description: Fabricates complex biological structures with high accuracy.
+      title: State-of-the-Art Equipment
+  - id: projects
+    block: collection
     design:
       view: card
       spacing:
-        padding: ["4rem", "0", "4rem", "0"]
+        padding:
+          - 4rem
+          - 0
+          - 4rem
+          - 0
       background:
         color: primary-50
-
-  - block: collection
-    id: publications
     content:
-      title: Publications
-      text: Recent papers and articles published by our group.
-      count: 5
+      text: Explore the diverse research projects underway in our lab.
+      count: 4
+      title: Our Research Projects
       sort_by: date
+      page_type: project
       sort_ascending: false
-      filters:
-        folders:
-          - publication
+  - id: publications
+    block: collection
     design:
       view: citation
       spacing:
-        padding: ["4rem", "0", "4rem", "0"]
+        padding:
+          - 4rem
+          - 0
+          - 4rem
+          - 0
       background:
         color: primary-100
-
-  - block: collection
-    id: news
     content:
-      title: "News & Events"
-      text: Stay updated on our latest announcements and upcoming events.
-      count: 3
+      text: Recent papers and articles published by our group.
+      count: 5
+      title: Publications
       sort_by: date
+      page_type: publication
       sort_ascending: false
-      filters:
-        folders:
-          - post
+  - id: news
+    block: collection
     design:
       view: compact
       spacing:
-        padding: ["4rem", "0", "4rem", "0"]
+        padding:
+          - 4rem
+          - 0
+          - 4rem
+          - 0
       background:
         color: primary-50
-
-  - block: markdown
-    id: contact
     content:
-      title: Get in Touch
-      subtitle: "Contact us for collaboration, questions, or visits."
-      text: |
-        - **Email:** [contact@stemlab.edu](mailto:contact@stemlab.edu)
-        - **Phone:** +123-456-7890
-        - **Address:** 123 Science Ave, Research City, Country
-        - **Connect:** [Twitter](https://twitter.com/ourstemlab) | [LinkedIn](https://linkedin.com/company/ourstemlab)
+      text: Stay updated on our latest announcements and upcoming events.
+      count: 3
+      title: "News & Events"
+      sort_by: date
+      page_type: post
+      sort_ascending: false
+  - id: contact
+    block: contact-info
     design:
       spacing:
-        padding: ["4rem", "0", "4rem", "0"]
+        padding:
+          - 4rem
+          - 0
+          - 4rem
+          - 0
       background:
         color: primary-100
+    content:
+      text: "Contact us for collaboration, questions, or visits."
+      email: "contact@stemlab.edu"
+      phone: +123-456-7890
+      title: Get in Touch
+      address: "123 Science Ave, Research City, Country"
+      social_links:
+        - url: "https://twitter.com/ourstemlab"
+          network: twitter
+        - url: "https://linkedin.com/company/ourstemlab"
+          network: linkedin
 ---
